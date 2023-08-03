@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 void main(){
   runApp(
     MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        useMaterial3: true
+      ),
       home: myApp(),
     ),
   );
@@ -24,42 +28,25 @@ class _myAppState extends State<myApp> {
         title: Text('Home'),
         backgroundColor: Colors.green,
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              padding: EdgeInsets.all(16),
-                child: Text('xyz')
-            ),
-            Container(
-                padding: EdgeInsets.all(10),
-                child: Text('xyz')
-            ),
-            Container(
-                padding: EdgeInsets.all(5),
-                child: Text('xyz')
-            ),
-            Container(
-                padding: EdgeInsets.all(5),
-                child: Text('xyz')
-            ),
-            Container(
-                padding: EdgeInsets.all(5),
-                child: Text('xyz')
-            ),
-            Container(
-                padding: EdgeInsets.all(5),
-                child: Text('xyz')
-            ),
-            Container(
-                padding: EdgeInsets.all(5),
-                child: Text('xyz')
-            ),
-            Container(
-                padding: EdgeInsets.all(5),
-                child: Text('xyz')
-            ),
-          ],
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                  onPressed: (){}, child: Text(
+                  'Me aperte',
+                style: TextStyle(
+                  color: Colors.white
+                ),
+              ),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.red[300]
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
